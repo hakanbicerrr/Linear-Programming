@@ -5,7 +5,7 @@ This is a course project that i impletented. This program reads data in a certai
 
 The .txt file form should be like the following:
 
-2 2 (m:# of constraints n: # of variables)___
+2 2 (m:# of constraints n: # of variables)____
 120 100 (objective function coefficients)___
-2 2 8______
+2 2 8_______
 4 5 15______
