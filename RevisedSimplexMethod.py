@@ -111,10 +111,7 @@ while 1:
             print("x{}:{}".format(N_idx[i], -entering_var_candidates[N_idx[i] - 1]), "\t", end=" ")
         print()
 
-    entering_var_candidates = np.around(entering_var_candidates, decimals=4)
-    entering_var_candidates[entering_var_candidates==0] = 0
-
-    if all(i >= 0 for i in (entering_var_candidates)):
+    if all(i >= 0 for i in np.round(entering_var_candidates, decimals= 4)):
         print()
         print("Congrats! Optimal Solution has been achieved. \nNumber of loops:{}".format(a))
         print("Optimal value of", current_sol[0], "has been reached.")
@@ -151,11 +148,8 @@ while 1:
     print("abarj ={}".format(t))
 
     # Check if the solution is unbounded.Condition: if every elements of t lower than zero,
-    #  solution is unbounded.
-    t = np.around(t, decimals=4)  # To solve decimal point issues and negative zeros.
-    t[t == 0] = 0
-    
-    if all(i <= 0 for i in t):
+    #  solution is unbounded
+    if all(i <= 0 for i in np.round(t, decimals= 4)):
         print("This solution is unbounded. Number of loops:{}".format(a))
         break
 
